@@ -1,0 +1,24 @@
+{
+  "name": "newtifrypro",
+  "description": "Server side NewtifryPro script.",
+  "version": "1.0.0",
+  "author": "Arnaud LAURENT <thunderace@free.fr>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/thunderace/NewtifryPro-node"
+  },
+  "bugs": {
+    "url": "http://github.com/thunderace/NewtifryPro-node/issues"
+  },
+  "license": "GNU GPL v3",
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "main": "./lib/NewtifryPro.js",
+  "dependencies": {
+    "request": "*"
+  },
+  "scripts": {
+    "test": "node tests/run.js"
+  }
+}

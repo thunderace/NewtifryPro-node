@@ -61,7 +61,7 @@ var five_images_message = {
 		title: new Buffer('Message with 5 images').toString('base64'),
 		source: new Buffer('Test').toString('base64'),
 		image1: new Buffer('http://www.newtifry.org/test_newtifry1.jpg').toString('base64'),
-		image2: new Buffer('http://www.newtifry.org/test_newtifry2.jpg').toString('base64'),
+		image2: new Buffer('http://www.newtifry.org/test_newtifry2.png').toString('base64'),
 		image3: new Buffer('http://www.newtifry.org/test_newtifry3.jpg').toString('base64'),
 		image4: new Buffer('http://www.newtifry.org/test_newtifry4.jpg').toString('base64'),
 		image5: new Buffer('http://www.newtifry.org/test_newtifry5.jpg').toString('base64'),

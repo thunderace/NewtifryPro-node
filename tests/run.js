@@ -22,7 +22,9 @@ var message = {
         message: new Buffer('Test message body').toString('base64'),
         priority:	2,
         title: new Buffer('Simple test message').toString('base64'),
-        source: new Buffer('Test').toString('base64')
+        source: new Buffer('Test').toString('base64'),
+        state: 1 ,// sticky
+        notify: 1
 //        url: '', // new Buffer('Test message').toString('base64'),
 //        image: '', // new Buffer('Test message').toString('base64'),
 //        speak: 1,
@@ -41,9 +43,9 @@ var single_image_message = {
 		title: new Buffer('Message with one image').toString('base64'),
 		source: new Buffer('Test').toString('base64'),
 		image: new Buffer('http://www.newtifry.org/test_newtifry1.jpg').toString('base64'),
-		url: new Buffer('https://newtifry.appspot.com').toString('base64')
+		url: new Buffer('https://newtifry.appspot.com').toString('base64'),
+        state: 2 // locked
 //		speak: 1,
-//		nocache: 0
     }
 };
 
@@ -65,7 +67,6 @@ var five_images_message = {
 		image5: new Buffer('http://www.newtifry.org/test_newtifry5.jpg').toString('base64'),
 		url: new Buffer('https://newtifry.appspot.com').toString('base64')
 //		speak: 1,
-//		nocache: 0
     }
 };
 

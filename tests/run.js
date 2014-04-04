@@ -14,9 +14,6 @@ try {
 }
 
 var message = {
-    collapseKey: 'demo',
-    delayWhileIdle: true,
-    timeToLive: 3,
     data: {
         type: 'ntp_message',
         message: new Buffer('Test message body').toString('base64'),
@@ -33,9 +30,6 @@ var message = {
 };
 
 var single_image_message = {
-	collapseKey: 'demo',	// optional
-	delayWhileIdle: true,	// optional
-	timeToLive: 3,			// optional
 	data: {
 		type: 'ntp_message',
 		message: new Buffer('Test message body').toString('base64'),
@@ -51,9 +45,6 @@ var single_image_message = {
 
 // only for version 1.2.0
 var five_images_message = {
-//	collapseKey: 'demo',	// optional
-//	delayWhileIdle: true,	// optional
-//	timeToLive: 3,			// optional
 	data: {
 		type: 'ntp_message',
 		message: new Buffer('Test message body').toString('base64'),

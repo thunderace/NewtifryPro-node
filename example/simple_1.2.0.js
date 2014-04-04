@@ -8,9 +8,6 @@ registrationIds.push('You second device ID');
 
 
 var single_image_message = {
-	collapseKey: 'demo',	// optional
-	delayWhileIdle: true,	// optional
-	timeToLive: 3,			// optional
 	data: {
 		type: 'ntp_message',
 		message: new Buffer('Test message body').toString('base64'),
@@ -25,9 +22,6 @@ var single_image_message = {
 };
 
 var five_images_message = {
-	collapseKey: 'demo',	// optional
-	delayWhileIdle: true,	// optional
-	timeToLive: 3,			// optional
 	data: {
 		type: 'ntp_message',
 		message: new Buffer('Test message body').toString('base64'),

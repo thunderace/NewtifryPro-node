@@ -7,9 +7,6 @@ registrationIds.push('You first device ID');
 registrationIds.push('You second device ID');
 
 var message = {
-	collapseKey: 'demo',	// optional
-	delayWhileIdle: true,	// optional
-	timeToLive: 3,			// optional
 	data: {
 		type: 'ntp_message',
 		message: new Buffer('Test message body').toString('base64'),

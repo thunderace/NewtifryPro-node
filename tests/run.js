@@ -35,7 +35,7 @@ var single_image_message = {
 		message: new Buffer('Test message body').toString('base64'),
 		priority:	2,
 		title: new Buffer('Message with one image').toString('base64'),
-		source: new Buffer('Test').toString('base64'),
+		source: new Buffer('Test1').toString('base64'),
 		image: new Buffer('http://www.newtifry.org/test_newtifry1.jpg').toString('base64'),
 		url: new Buffer('https://newtifry.appspot.com').toString('base64'),
         state: 2 // locked
@@ -50,7 +50,7 @@ var five_images_message = {
 		message: new Buffer('Test message body').toString('base64'),
 		priority:	2,
 		title: new Buffer('Message with 5 images').toString('base64'),
-		source: new Buffer('Test').toString('base64'),
+		source: new Buffer('Test2').toString('base64'),
 		image1: new Buffer('http://www.newtifry.org/test_newtifry1.jpg').toString('base64'),
 		image2: new Buffer('http://www.newtifry.org/test_newtifry2.png').toString('base64'),
 		image3: new Buffer('http://www.newtifry.org/test_newtifry3.jpg').toString('base64'),
@@ -61,29 +61,29 @@ var five_images_message = {
     }
 };
 
-
-/*
 newtifryPro.sendMessage(message, apikey, registrationIds, function (err, data) {
 	if (err === null) {
 		console.log(data);
+		console.log(message);
 	} else {
 		console.log(err);
 	}
 });
 
-single_image_message.data.timestamp = now.toISOString();
+
 newtifryPro.sendMessage(single_image_message, apikey, registrationIds, function (err, data) {
 	if (err === null) {
 		console.log(data);
+		console.log(single_image_message);
 	} else {
 		console.log(err);
 	}
 });
-*/
 
 newtifryPro.sendMessage(five_images_message, apikey, registrationIds, function (err, data) {
 	if (err === null) {
 		console.log(data);
+		console.log(five_images_message);
 	} else {
 		console.log(err);
 	}

@@ -1,7 +1,7 @@
 {
   "name": "newtifrypro",
   "description": "Server side NewtifryPro script.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "author": "Arnaud LAURENT <thunderace@free.fr>",
   "repository": {
     "type": "git",

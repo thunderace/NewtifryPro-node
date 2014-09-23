@@ -15,7 +15,6 @@ message1.send(function (err, data) {
 	if (err === null) {
 		console.log(data);
 	} else {
-		counter--;
 		console.log(err);
 	}
 });

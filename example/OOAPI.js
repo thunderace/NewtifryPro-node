@@ -12,9 +12,9 @@ message1.addRegistrationId(registrationId);
 message1.setMessage('OOAPI test');
 message1.setSticky();
 message1.send(function (err, data) {
-	if (err === null) {
-		console.log(data);
-	} else {
-		console.log(err);
-	}
+  if (err === null) {
+    console.log(data);
+  } else {
+    console.log(err);
+  }
 });

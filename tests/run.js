@@ -21,10 +21,6 @@ var message = {
         source: new Buffer('Test').toString('base64'),
         state: 1 ,// sticky
         notify: 1
-//        url: '', // new Buffer('Test message').toString('base64'),
-//        image: '', // new Buffer('Test message').toString('base64'),
-//        speak: 1,
-//        nocache: 0
     }
 };
 
@@ -35,7 +31,7 @@ var single_image_message = {
 		priority:	2,
 		title: new Buffer('Message with one image').toString('base64'),
 		source: new Buffer('Test1').toString('base64'),
-		image: new Buffer('http://www.newtifry.org/test_newtifry1.jpg').toString('base64'),
+		image: new Buffer('http://upload.wikimedia.org/wikipedia/commons/b/b5/PA120016.JPG').toString('base64'),
 		url: new Buffer('https://newtifry.appspot.com').toString('base64'),
         state: 2 // locked
     }
@@ -46,33 +42,18 @@ var five_images_message = {
 	data: {
 		type: 'ntp_message',
 		message: new Buffer('Test message body').toString('base64'),
-		priority:	2,
+		priority:	3,
 		title: new Buffer('Message with 5 images').toString('base64'),
 		source: new Buffer('Test2').toString('base64'),
-		image1: new Buffer('http://www.newtifry.org/test_newtifry1.jpg').toString('base64'),
-		image2: new Buffer('http://www.newtifry.org/test_newtifry2.png').toString('base64'),
-		image3: new Buffer('http://www.newtifry.org/test_newtifry3.jpg').toString('base64'),
-		image4: new Buffer('http://www.newtifry.org/test_newtifry4.jpg').toString('base64'),
-		image5: new Buffer('http://www.newtifry.org/test_newtifry5.jpg').toString('base64'),
+		image1: new Buffer('http://upload.wikimedia.org/wikipedia/commons/b/b5/PA120016.JPG').toString('base64'),
+		image2: new Buffer('http://upload.wikimedia.org/wikipedia/commons/c/c3/The_Blue_Bell_-_geograph.org.uk_-_163687.jpg').toString('base64'),
+		image3: new Buffer('http://upload.wikimedia.org/wikipedia/commons/b/b3/Trassenheide%2C_Die_Welt_steht_Kopf.jpg').toString('base64'),
+		image4: new Buffer('http://upload.wikimedia.org/wikipedia/commons/2/20/Bachorza%2C_dw%C3%B3r_A-259.jpg').toString('base64'),
+		image5: new Buffer('http://upload.wikimedia.org/wikipedia/commons/2/20/Interior_of_log_house.jpg').toString('base64'),
 		url: new Buffer('https://newtifry.appspot.com').toString('base64')
     }
 };
 
-
-// only for version > 1.2.0
-var tagged_message = {
-    data: {
-		type: 'ntp_message',
-        message: new Buffer('Test tagged message body').toString('base64'),
-		priority:	2,
-		title: new Buffer('Message title').toString('base64'),
-		source: new Buffer('Tagged').toString('base64'),
-//		image: new Buffer('http://www.newtifry.org/test_newtifry1.jpg').toString('base64'),
-        tag: 1 // set tag
-    }
-};
-
-/*
 newtifryPro.sendMessage(message, apikey, registrationIds, function (err, data) {
 	if (err === null) {
 		console.log(data);
@@ -100,26 +81,4 @@ newtifryPro.sendMessage(five_images_message, apikey, registrationIds, function (
 		console.log(err);
 	}
 });
-
-newtifryPro.sendMessage(tagged_message, apikey, registrationIds, function (err, data) {
-    if (err === null) {
-		console.log(data);
-		console.log(tagged_message);
-	} else {
-		console.log(err);
-	}
-});
-*/
-// remove tagged message
-tagged_message.data.tag = 0;
-tagged_message.data.priority = 1;
-newtifryPro.sendMessage(tagged_message, apikey, registrationIds, function (err, data) {
-    if (err === null) {
-        console.log(data);
-		console.log(tagged_message);
-	} else {
-		console.log(err);
-	}
-});
-
 

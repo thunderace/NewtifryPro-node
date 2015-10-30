@@ -11,6 +11,7 @@ message1.setSenderId(apikey);
 message1.addRegistrationId(registrationId);
 message1.setMessage('OOAPI test');
 message1.setSticky();
+message1.setPriority(2);
 message1.send(function (err, data) {
   if (err === null) {
     console.log(data);

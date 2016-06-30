@@ -63,7 +63,8 @@ newtifryPro.sendMessage(message, apikey, registrationIds, function (err, data) {
   }
 });
 
-newtifryPro.sendMessage(single_image_message, apikey, registrationIds, function (err, data) {
+// only for NewtgifryPro >= v2.xx
+newtifryPro.sendTopicMessage(single_image_message, apikey, function (err, data) {
   if (err === null) {
     console.log(data);
     console.log(single_image_message);

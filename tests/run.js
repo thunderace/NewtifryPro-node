@@ -57,17 +57,15 @@ var five_images_message = {
 newtifryPro.sendMessage(message, apikey, registrationIds, function (err, data) {
   if (err === null) {
     console.log(data);
-    console.log(message);
   } else {
     console.log(err);
   }
 });
 
 // only for NewtgifryPro >= v2.xx
-newtifryPro.sendTopicMessage(single_image_message, apikey, function (err, data) {
+newtifryPro.sendMessageToTopic(single_image_message, apikey, 'redmi', function (err, data) {
   if (err === null) {
     console.log(data);
-    console.log(single_image_message);
   } else {  
     console.log(err);
   }
@@ -76,7 +74,6 @@ newtifryPro.sendTopicMessage(single_image_message, apikey, function (err, data) 
 newtifryPro.sendMessage(five_images_message, apikey, registrationIds, function (err, data) {
   if (err === null) {
     console.log(data);
-    console.log(five_images_message);
   } else {
     console.log(err);
   }

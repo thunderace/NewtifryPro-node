@@ -19,3 +19,12 @@ message1.send(function (err, data) {
     console.log(err);
   }
 });
+
+message1.setTopic('newtifrypro');
+message1.sendToTopic(function (err, data) {
+  if (err === null) {
+    console.log(data);
+  } else {
+    console.log(err);
+  }
+});

@@ -20,7 +20,20 @@ var message = {
     title: new Buffer('Simple test message').toString('base64'),
     source: new Buffer('Test').toString('base64'),
     state: 1 ,// sticky
-    notify: 1
+    notify: 1, 
+  }
+};
+
+var message_with_tag = {
+  data: {
+    type: 'ntp_message',
+    message: new Buffer('Test message body' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)).toString('base64'),
+    priority:	2,
+    title: new Buffer('Simple test message').toString('base64'),
+    source: new Buffer('Test').toString('base64'),
+    state: 1 ,// sticky
+    notify: 1, 
+    tag: 'message_with_tag'
   }
 };
 
@@ -74,6 +87,7 @@ var full_message = {
   }
 };
 
+
 /*
 newtifryPro.sendMessage(message, apikey, registrationIds, function (err, data) {
   if (err === null) {
@@ -82,7 +96,6 @@ newtifryPro.sendMessage(message, apikey, registrationIds, function (err, data) {
     console.log(err);
   }
 });
-
 newtifryPro.sendMessage(five_images_message, apikey, registrationIds, function (err, data) {
   if (err === null) {
     console.log(data);
@@ -90,7 +103,6 @@ newtifryPro.sendMessage(five_images_message, apikey, registrationIds, function (
     console.log(err);
   }
 });
-*/
 
 // only for NewtifryPro >= v2.xx
 /*
@@ -102,6 +114,7 @@ newtifryPro.sendMessageToTopic(single_image_message, apikey, 'domo', function (e
   }
 });
 */
+/*
 // only for NewtifryPro >= v2.xx
 newtifryPro.sendMessageToTopic(full_message, apikey, 'domo', function (err, data) {
   if (err === null) {
@@ -110,6 +123,14 @@ newtifryPro.sendMessageToTopic(full_message, apikey, 'domo', function (err, data
     console.log(err);
   }
 });
-
+*/
+// only for NewtifryPro >= v2.10
+newtifryPro.sendMessage(message_with_tag, apikey, registrationIds, function (err, data) {
+  if (err === null) {
+    console.log(data);
+  } else {
+    console.log(err);
+  }
+});
 
 

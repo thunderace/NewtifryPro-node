@@ -18,4 +18,5 @@ long_test.js
 ooTest.js
 romain.js
 my_tests/
-
+serviceAccount.json
+package-lock.json
